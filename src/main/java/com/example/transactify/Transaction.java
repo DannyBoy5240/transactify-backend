@@ -15,6 +15,17 @@ public class Transaction {
 
     private String creditOrDebit; // Values: "CREDIT" or "DEBIT"
 
+    // No-argument constructor (required for JPA or frameworks like Hibernate)
+    public Transaction() {
+    }
+
+    // Constructor with arguments
+    public Transaction(String accountNumber, BigDecimal amount, String creditOrDebit) {
+        this.accountNumber = accountNumber;
+        this.amount = amount;
+        this.creditOrDebit = creditOrDebit;
+    }
+
     // Getters and Setters
     public Long getTransactionId() {
         return transactionId;
